@@ -1,0 +1,24 @@
+<?php
+
+$config = [];
+
+// How long a ticked "Keep me logged in" lasts, in days, from when it was
+// ticked (it doesn't slide). Remembered browsers' sessions also get this
+// as their inactivity timeout; everyone else keeps Roundcube's normal
+// session_lifetime.
+$config['rememberme_days'] = 30;
+
+// Most remembered browsers per user; ticking the box on another one
+// forgets the least recently used.
+$config['rememberme_max_devices'] = 10;
+
+// Usernames allowed to use "Keep me logged in". null/empty = everyone.
+// Example: $config['rememberme_users'] = ['joe.bloggs'];
+$config['rememberme_users'] = null;
+
+// Cookie name for the remember-me token.
+$config['rememberme_cookie'] = 'roundcube_rememberme';
+
+// Log remembers, automatic logins and rejected tokens to the 'rememberme'
+// log (no passwords or tokens are ever logged).
+$config['rememberme_log'] = true;

@@ -1,0 +1,70 @@
+/* rememberme: login-page checkbox and Settings -> Remembered devices. */
+
+/* Same 7px as Elastic leaves between the username and password input
+ * groups, above and below -- the Login button's paragraph has no top
+ * margin of its own. */
+#login-form .rememberme-option {
+    margin: 7px 0;
+    text-align: left;
+}
+
+#login-form .rememberme-option label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Settings nav icon: fa-laptop (\f109). */
+.listing.iconized li.rememberme > a:before {
+    content: "\f109";
+}
+
+.rememberme-settings {
+    padding: 1em 1.5em 0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.rememberme-devices {
+    width: 100%;
+}
+
+.rememberme-devices td,
+.rememberme-devices th {
+    padding: 0.5em 0.75em 0.5em 0;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* Phones: keep Device, Last used and Sign out; let the device name wrap. */
+@media screen and (max-width: 768px) {
+    .rememberme-devices .rememberme-wide {
+        display: none;
+    }
+
+    .rememberme-devices td:first-child {
+        white-space: normal;
+    }
+
+    .rememberme-settings {
+        padding: 1em 1em 0;
+    }
+}
+
+.rememberme-current {
+    display: inline-block;
+    margin-left: 0.5em;
+    padding: 0 0.5em;
+    border-radius: 3px;
+    font-size: 0.85em;
+    background: rgba(55, 190, 255, 0.15);
+}
+
+.rememberme-settings .rememberme-actions {
+    display: flex;
+    gap: 1em;
+    margin: 1em 0;
+    padding: 0;
+}
