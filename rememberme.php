@@ -306,6 +306,7 @@ class rememberme extends rcube_plugin
 
         if ($parts && ($row = $this->find_by_selector($parts['selector']))) {
             $this->delete_token((int) $row['id']);
+            $this->log('logged out; device forgotten', $row['username']);
         }
 
         $this->clear_cookie();

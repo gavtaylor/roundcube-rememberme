@@ -31,6 +31,8 @@ HTTPS):
   login page was shown.
 - **Login page:** the toggle is spaced like the inputs above it, and it stays
   ticked when the form comes back after a failed login.
+- **Logout:** logging out deleted that device's token, and the next visit asked
+  for the password again. From v0.1.1 this is also logged.
 
 Not yet exercised live: the `password_change` hook (no password plugin is
 enabled on the test instance).
